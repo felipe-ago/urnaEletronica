@@ -1,36 +1,45 @@
-body{
+@keyframes pisca{
+    0% {opacity: 0;;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+body {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.urna{
+.urna {
     background-color: #dbd5c9;
     padding: 30px;
     display: flex;
 }
 
-.tela{
+.tela {
     width: 500px;
     height: 320px;
     background: linear-gradient(to right, #e8e8e8, #c1c1c1);
     border: 2px solid #000;
+    display: flex;
+    flex-direction: column;
 }
 
-.teclado{
+.teclado {
     background-color: #403a3a;
     margin-left: 30px;
     border: 2px solid #000;
 }
 
-.teclado-linha{
+.teclado-linha {
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 
-.teclado-botao{
+.teclado-botao {
     width: 70px;
     height: 40px;
     background-color: #000;
@@ -44,7 +53,7 @@ body{
     box-shadow: 3px 3px 0px #555;
 }
 
-.botao-branco{
+.botao-branco {
     background-color: #FFF;
     color: #000;
     font-size: 15px;
@@ -52,7 +61,7 @@ body{
     width: 80px;
 }
 
-.botao-corrige{
+.botao-corrige {
     background-color: #f09046;
     color: #000;
     font-size: 15px;
@@ -60,11 +69,105 @@ body{
     width: 80px;
 }
 
-.botao-confirma{
+.botao-confirma {
     background-color: #48c079;
     color: #000;
     font-size: 15px;
     font-weight: bold;
     width: 90px;
     height: 55px;
+}
+
+.divisao-1 {
+    flex: 1;
+    display: flex;
+}
+
+.divisao1-esq {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.divisao1-esq-1 {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.divisao1-esq-2 {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divisao1-esq-3 {
+    height: 50px;
+    /*display: flex;
+    padding-left: 10px;
+    align-items: center;*/
+}
+
+.numero{
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    border: 2px solid #000;
+    align-items: center;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+}
+
+.pisca{
+    animation-name: pisca;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.divisao1-esq-4 {
+    flex: 1;
+    line-height: 40px;
+    padding-left: 10px;
+}
+
+.divisao1-dir {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.divisao1-dir span{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.divisao1-image{
+    border: 1px solid #000;
+    background-color: #FFF;
+    height: 70%;
+}
+
+.divisao1-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.divisao1-image.pequeno{
+    width: 60%;
+    height: 30%;
+}
+
+
+
+.divisao-2 {
+    height: 50px;
+    font-size: 14px;
+    border-top: 2px solid #000;
+    padding-left: 10px;
 }
